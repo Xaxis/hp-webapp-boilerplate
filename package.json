@@ -1,0 +1,33 @@
+{
+  "name": "hp-webapp-boilerplate",
+  "version": "0.0.0",
+  "description": "Scaffolding for building high performance web applications with node.js.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch --mode=development --config webpack.config.js",
+    "build": "webpack --mode=production --config webpack.config.js",
+    "analyze": "webpack --mode=production --profile --json > ./webpack.stats.json --config webpack.config.js && webpack-bundle-analyzer ./webpack.stats.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xaxis/hp-webapp-boilerplate.git"
+  },
+  "author": "Wil Neeley <william.neeley@gmail.com> (https://github.com/Xaxis)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xaxis/hp-webapp-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Xaxis/hp-webapp-boilerplate#readme",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-shell": "^0.6.5",
+    "webpack": "^4.9.1",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^2.1.4"
+  }
+}
