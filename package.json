@@ -1,12 +1,15 @@
 {
   "name": "hp-webapp-boilerplate",
   "version": "0.0.0",
-  "description": "Scaffolding for building high performance web applications with node.js.",
-  "main": "server.js",
+  "description": "A simple scaffolding for building Webpack bundled high performance web applications with a Node backend.",
+  "main": "app/dist/bundle_front-1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --watch --mode=development --config webpack.config.js",
-    "build": "webpack --mode=production --config webpack.config.js",
+    "start-server": "echo \"Starting server on: app/src/back/server.js\" && node app/src/back/server.js",
+    "build-dev": "webpack --watch --mode=development --config webpack.config.js",
+    "build-prod": "webpack --mode=production --config webpack.config.js",
+    "build:dev": "NODE_ENV=development npm run build-dev",
+    "build:prod": "NODE_ENV=production npm run build-prod",
     "analyze": "webpack --mode=production --profile --json > ./webpack.stats.json --config webpack.config.js && webpack-bundle-analyzer ./webpack.stats.json"
   },
   "repository": {
@@ -20,7 +23,9 @@
   },
   "homepage": "https://github.com/Xaxis/hp-webapp-boilerplate#readme",
   "dependencies": {
-    "lodash": "^4.17.10"
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "socket.io": "^2.1.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

@@ -2,7 +2,7 @@
 
 ## Summary
 
-Scaffolding for building Webpack bundled high performance web applications with a Node backend.
+A simple scaffolding for building Webpack bundled high performance web applications with a Node backend.
 
 ## Features
 
@@ -24,3 +24,4 @@ Wil Neeley ( [twitter](http://twitter.com/wilneeley) / [linkedin](https://www.li
 3. From your project root run `npm install`.
 4. From your project root run `gulp build` to build the project.
 5. While developing you can run `gulp watch` which invokes a file watcher.
+6. Run `npm run start-server` to start the node server.

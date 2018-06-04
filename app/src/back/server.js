@@ -39,7 +39,7 @@ var App = (function(A) {
     };
 
     return A;
-  } (App || {}));
+} (App || {}));
 
 
 /**

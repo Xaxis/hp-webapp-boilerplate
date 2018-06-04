@@ -41,7 +41,7 @@ gulp.task('dependency-install', ['dependency-clean'], shell.task(
 // Compiles and minifies frontend JavaScript using webpack
 gulp.task('js-build', ['dependency-install'], shell.task(
     [
-        'npm run build'
+        'npm run build:prod'
     ],
     {cwd: './', verbose: true})
 );
@@ -49,7 +49,7 @@ gulp.task('js-build', ['dependency-install'], shell.task(
 // JS watch task used during "gulp watch" task
 gulp.task('js-watch', ['dependency-install'], shell.task(
     [
-        'npm run dev'
+        'npm run build:dev'
     ],
     {cwd: './', verbose: true})
 );

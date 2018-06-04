@@ -4,6 +4,22 @@
 const webpack = require('webpack');
 const path = require('path');
 
+// Returns host based on environment
+var getHost = function() {
+    var host = "";
+    switch (process.env.NODE_ENV) {
+        case 'production' :
+            host = '//localhost';
+        break;
+        case 'development' :
+            host = '//localhost';
+        break;
+    }
+    return host;
+};
+
+
+// Webpack configuration
 module.exports = {
     entry: {
         'bundle_front-1': __dirname + '/app/src/init/init_front-1.js'
