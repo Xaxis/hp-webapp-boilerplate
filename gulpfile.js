@@ -28,7 +28,7 @@ gulp.task('dependency-clean', function() {
 gulp.task('dependency-install', ['dependency-clean'], shell.task(
     [
         'npm install',
-        'mv node_modules app/src/libs/vendor'
+        'ln -s ../../../node_modules/ app/src/libs/vendor'
     ],
     {cwd: './', verbose: true})
 );
