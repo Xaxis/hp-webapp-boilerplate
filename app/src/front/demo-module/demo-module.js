@@ -15,7 +15,8 @@ const DemoModule = function() {
             });
 
             // Connect to server
-            let socket = io.connect('//localhost:9222');
+            let origin = window.location.hostname;
+            let socket = io.connect(`//${origin}:9222`);
 
             // Register
             socket.emit('register', {ready: true});
